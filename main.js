@@ -4,12 +4,12 @@ function getRon() {
         .then(data => document.getElementById("ron").innerHTML=(data ?? "Something is wrong..."));
 
 }
-function getTrump() {
+/*function getTrump() {
     fetch('https://www.tronalddump.io/random/quote')
         .then(response => response.json())
         .then(data => document.getElementById("trump").innerHTML=(data.value ?? "Something is wrong..."));
 
-}
+}*/
 function getYe() {
     fetch('https://api.kanye.rest/')
         .then(response => response.json())
@@ -19,4 +19,4 @@ function getYe() {
 
 getYe()
 getRon()
-getTrump()
+//getTrump()
