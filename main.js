@@ -31,7 +31,6 @@ getTrump()
 
 }*/
 
-function shareYe() {
     const shareData = {
         title: 'Quote',
         text: 'Read this Quote from Kanye West: '+document.getElementById("ye").innerHTML,
@@ -48,4 +47,3 @@ function shareYe() {
           alert("Error: "+ err)
         }
       });
-}
