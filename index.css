@@ -1,0 +1,11 @@
+div {
+    background-color: rgb(179, 179, 179);
+    width: 300px;
+    padding: 12px;
+    border-radius: 15px;
+    font-style: italic;
+}
+img {
+    height: 30px;
+    border-radius: 500px;
+}
