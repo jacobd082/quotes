@@ -20,3 +20,8 @@ function getYe() {
 getYe()
 getRon()
 getTrump()
+
+function share(person, quote) {
+    text = ("Read this quote from "+person+"! "+quote+"\nFind more quotes at:")
+    navigator.share(text, "https://zzz.jacobdrath.co/quotes/")
+}
