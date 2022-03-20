@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Quotes</title>
+</head>
+<body style="font-family: sans-serif;">
+    <h1>Ron Swanson</h1>
+    <p>New quote in <span id="sec">5</span> second(s)</p>
+    <h1 id="q"></h1>
+
+    <script>
+        getRon()
+        function getRon() {
+            fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
+                .then(response => response.json())
+                .then(data => document.getElementById("q").innerHTML=(data ?? "Something is wrong..."));
+            document.getElementById('sec').innerHTML=("5")
+            setTimeout(function(){
+                document.getElementById('sec').innerHTML=("4")
+                setTimeout(function(){
+                    document.getElementById('sec').innerHTML=("3")
+                    setTimeout(function(){
+                        document.getElementById('sec').innerHTML=("2")
+                        setTimeout(function(){
+                            document.getElementById('sec').innerHTML=("1")
+                            setTimeout(function(){
+                                document.getElementById('sec').innerHTML=("0")
+                                getRon()
+                            }, 1050);
+                        }, 1050);
+                    }, 1050);
+                }, 1050);
+            }, 1050);
+        }
+    </script>
+</body>
+</html>
