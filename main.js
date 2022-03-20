@@ -30,10 +30,10 @@ getTrump()
     }
 
 }*/
-
+    var qu = 'Read this Quote from Kanye West: '+document.getElementById("ye").innerHTML
     const shareData = {
         title: 'Quote',
-        text: 'Read this Quote from Kanye West: '+document.getElementById("ye").innerHTML,
+        text: qu,
         url: 'https://zzz.jacobdrath.co/quotes/'
       }
     
