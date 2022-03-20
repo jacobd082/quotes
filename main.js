@@ -24,7 +24,7 @@ getTrump()
 function share(person, quote) {
     text = ("Read this quote from "+person+"! "+quote+"\nFind more quotes at:")
     try {
-        await navigator.share("Quote",text, "https://zzz.jacobdrath.co/quotes/")
+        navigator.share("Quote",text, "https://zzz.jacobdrath.co/quotes/")
     } catch {
         alert("Share is not supported.")
     }
