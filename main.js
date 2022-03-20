@@ -13,7 +13,9 @@ function getTrump() {
 function getYe() {
     fetch('https://api.kanye.rest/')
         .then(response => response.json())
-        .then(data => document.getElementById("ye").innerHTML=(data.quote ?? "Something is wrong..."));
+        .then(data => sessionStorage.setItem("ye", data.quote))
+        document.getElementById("ye").innerHTML=(sessionStorage.getItem("ye") ?? "Something is wrong...")
+
 
 }
 
@@ -30,7 +32,7 @@ getTrump()
     }
 
 }*/
-    var qu = 'Read this Quote from Kanye West: '+document.getElementById("ye").innerHTML
+    var qu = 'Read this Quote from Kanye West: '+sessionStorage.getItem("ye")
     const shareData = {
         title: 'Quote',
         text: qu,
