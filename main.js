@@ -21,7 +21,7 @@ getYe()
 getRon()
 getTrump()
 
-function share(person, quote) {
+/*function share(person, quote) {
     text = ("Read this quote from "+person+"! "+quote+"\nFind more quotes at:")
     try {
         navigator.share("Quote",text, "https://zzz.jacobdrath.co/quotes/")
@@ -29,4 +29,23 @@ function share(person, quote) {
         alert("Share is not supported. JS ERROR: "+er)
     }
 
+}*/
+
+function shareYe() {
+    const shareData = {
+        title: 'Quote',
+        text: 'Read this Quote from Kanye West: '+document.getElementById("ye").innerHTML,
+        url: 'https://zzz.jacobdrath.co/quotes/'
+      }
+    
+      const btn = document.querySelector('#YeShare');
+    
+      // Share must be triggered by "user activation"
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.share(shareData)
+        } catch(err) {
+          alert("Error: "+ err)
+        }
+      });
 }
